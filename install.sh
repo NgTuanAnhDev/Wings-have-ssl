@@ -1,5 +1,6 @@
 #!/bin/bash
 #Tool Made By Nguyentuananh.enternal
+#Bản quyền thuộc Dptcloud.vn
 
 clear
 echo "Bắt đầu cài đặt Wings Daemon..."
