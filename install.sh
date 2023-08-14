@@ -15,7 +15,6 @@ echo "Cấu hình Wings..."
 
 cp wings.service /etc/systemd/system/wings.service
 read -p "Nhập tên miền của bạn (ví dụ: example.com): " domain
-read -p "Nhập TOKEN của bạn sau dấu && của Auto-Deploy: " token
 read -p "Nhập STT Node: " node
 
 echo "Bắt đầu cài đặt SSL cho Wings..."
@@ -26,7 +25,7 @@ certbot renew --dry-run
 
 echo "Cấu hình Wings sử dụng SSL..."
 
-cd /etc/pterodactyl && sudo wings configure --panel-url https://gaming.dptcloud.vn --token $token --node $node
+cd /etc/pterodactyl && sudo wings configure --panel-url https://gaming.dptcloud.vn --token ptla_odeYsWXeK7nTNwTnvJiCbubSxcrgeSj9lw8URtgd860 --node $node
 systemctl enable wings.service
 systemctl start wings.service
 
