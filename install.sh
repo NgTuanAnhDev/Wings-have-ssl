@@ -26,7 +26,7 @@ certbot renew --dry-run
 
 echo "Cấu hình Wings sử dụng SSL..."
 
-cd /etc/pterodactyl && sudo wings configure --panel-url https://gaming.dptcloud.vn --token pt $token --node $node
+cd /etc/pterodactyl && sudo wings configure --panel-url https://gaming.dptcloud.vn --token $token --node $node
 systemctl enable wings.service
 systemctl start wings.service
 
