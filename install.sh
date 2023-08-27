@@ -32,6 +32,7 @@ RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target" | sudo tee /etc/systemd/system/wings.service
+read -p "Nhập token Panel: " token
 read -p "Nhập tên miền của bạn (ví dụ: example.com): " domain
 read -p "Nhập STT Node: " node
 
@@ -43,7 +44,7 @@ certbot renew --dry-run
 
 echo "Cấu hình Wings sử dụng SSL..."
 
-cd /etc/pterodactyl && sudo wings configure --panel-url https://gaming.dptcloud.vn --token ptla_odeYsWXeK7nTNwTnvJiCbubSxcrgeSj9lw8URtgd860 --node $node
+cd /etc/pterodactyl && sudo wings configure --panel-url https://gaming.dptcloud.vn --token $token --node $node
 systemctl enable wings.service
 systemctl start wings.service
 
